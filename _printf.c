@@ -1,28 +1,3 @@
-84% of storage used … 
-You can clean up space or get more storage for Drive, Gmail, and Google Photos.
-_printf.c.txt
-Who has access
-A
-System properties
-Type
-Text
-Size
-1 KB
-Storage used
-1 KB
-Location
-print_f
-Owner
-Antony Bahati
-Modified
-Oct 17, 2022 by Antony Bahati
-Opened
-4:51 AM by me
-Created
-Oct 17, 2022
-No description
-Viewers can download
-
 #include "main.h"
 #include <stdlib.h>
 
@@ -76,7 +51,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	va_start(valist, format);
+	va_start(va_list, format);
 	while (format[i])
 	{
 		for (; format[i] != '%' && format[i]; i++)
@@ -102,6 +77,6 @@ int _printf(const char *format, ...)
 		else
 			i++;
 	}
-	va_end(valist);
+	va_end(va_list);
 	return (count);
 }
